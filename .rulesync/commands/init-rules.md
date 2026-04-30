@@ -11,5 +11,6 @@ Load the `rulesync` skill, then:
    - Appropriate frontmatter (`root`, `targets`, `description`, `globs`)
    - Meaningful rule content based on repo analysis
    - Glob patterns that match relevant files for each rule
+   - Keep rules small, concise. Keep it to 10-15 lines for each (excluding frontmatter)
 4. Follow rulesync rule format from `.rulesync/skills/rulesync/file-formats.md`
 5. Suggest running `rulesync generate --targets "*" --features "*"` after review
