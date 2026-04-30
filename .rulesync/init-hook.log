@@ -1,0 +1,14 @@
+Init hook
+=========
+Failures: 0
+
+All steps
+ran: skills update -y
+ran: rulesync import -t agentsskills -f skills
+ran: rulesync generate -s
+ran: ./scripts/dg.sh sync
+state: todosExist=false
+ran: td init
+state: todosExist=true
+ran: npx skillgrab -y
+state: skillgrabRan=true

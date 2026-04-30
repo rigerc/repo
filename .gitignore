@@ -1,0 +1,35 @@
+# env
+
+.env
+.envrc
+
+# docs, context
+
+docs/
+.todos/
+.context.json
+
+# ai agents
+
+.agents/
+.gemini/
+.claude/
+.zed/
+!.zed/settings.json
+.opencode/
+.codex/
+.junie/
+.mux/
+
+.cursor/
+.antigravity/
+
+opencode.json
+opencode.jsonc
+CLAUDE.md
+
+# repo scaffold guidance
+guidance.md
+
+# skills cli
+skills-lock.json
