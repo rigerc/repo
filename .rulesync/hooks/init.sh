@@ -5,7 +5,6 @@
 set -uo pipefail
 
 REPO_JSON=".repo.json"
-SKILLGRAB_FLAG="skillgrabRan"
 TODOS_FLAG="todosExist"
 TODOS_DIR=".todos"
 DG_SYNC_SCRIPT="./scripts/dg.sh"
@@ -208,24 +207,6 @@ if [[ ! -d "$TODOS_DIR" ]]; then
 else
     log_step "skip" "td init ($TODOS_DIR already exists)"
     add_summary "skipped: td init ($TODOS_DIR already exists)"
-fi
-
-# Run 'npx skillgrab' only once.
-if [[ "$(get_json_field "$REPO_JSON" "$SKILLGRAB_FLAG")" != "true" ]]; then
-    log_step "start" "npx skillgrab -y"
-    if has_cmd npx; then
-        if run_step npx skillgrab -y; then
-            set_json_field "$REPO_JSON" "$SKILLGRAB_FLAG" true
-            log_step "state" "$REPO_JSON => ${SKILLGRAB_FLAG}=true"
-            add_summary "state: ${SKILLGRAB_FLAG}=true"
-        fi
-    else
-        log_step "skip" "npx skillgrab -y (npx not available)"
-        add_summary "skipped: npx skillgrab -y (npx not available)"
-    fi
-else
-    log_step "skip" "npx skillgrab -y (already ran according to $REPO_JSON)"
-    add_summary "skipped: npx skillgrab -y (already ran according to $REPO_JSON)"
 fi
 
 log_step "done" "Initialization complete"

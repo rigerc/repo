@@ -1,3 +1,5 @@
+> **Reminder:** run `npx skillgrab` to scan your workspace and fetch recommended skills.
+
 # repo
 
 A scaffold for AI-assisted development across multiple coding agents (Claude Code, Codex CLI, OpenCode, Zed, VS Code Copilot). It wires together four tools:

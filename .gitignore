@@ -2,6 +2,9 @@
 
 .env
 .envrc
+.mcp.json
+mcp.json
+.rulesync/mcp.json
 
 # docs, context
 
@@ -33,3 +36,7 @@ guidance.md
 
 # skills cli
 skills-lock.json
+
+# logs
+
+.rulesync/init-hook.log
