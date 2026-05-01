@@ -14,7 +14,8 @@ docs/
 
 # ai agents
 
-.agents/
+#.agents/
+
 .gemini/
 .claude/
 .zed/

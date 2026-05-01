@@ -15,9 +15,6 @@
       "subagents",
       "hooks"
     ],
-    "agentsskills": [
-      "*"
-    ],
     "zed": [
       "*"
     ]
